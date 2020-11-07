@@ -40,14 +40,13 @@ void queue_dequeue(queue_ptr_t queue_ptr)
     }
 }
 
-bool queue_is_empty(queue_ptr_t queue_ptr)
+bool queue_is_empty(queue_t queue)
 {
-    return queue_ptr->front_data_ptr
-        == queue_ptr->back_data_ptr
+    return queue.front_data_ptr
         == NULL;
 }
 
 data_ptr_t queue_peek(queue_t queue)
 {
-    return queue_ptr->front_data_ptr;
+    return queue.front_data_ptr;
 }

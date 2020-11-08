@@ -5,3 +5,9 @@ project(app)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
 
 add_library(${PROJECT_NAME} SHARED src/queue.c)
+
+enable_testing()
+
+add_subdirectory(googletest)
+
+add_subdirectory(test)

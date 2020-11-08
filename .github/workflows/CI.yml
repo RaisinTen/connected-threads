@@ -18,4 +18,6 @@ jobs:
     - name: Build
       run: (cd build && cmake --build .)
     - name: Test
-      run: (cd build && GTEST_COLOR=1 ctest -V)
+      run: (cd build && ctest -V)
+      env:
+        GTEST_COLOR: 1

@@ -8,7 +8,18 @@ set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
 
-add_library(${PROJECT_NAME} STATIC src/queue.c)
+set(
+    Sources
+    src/queue.c
+    )
+
+set(
+    Headers
+    include/data.h
+    include/queue.h
+    )
+
+add_library(${PROJECT_NAME} STATIC ${Sources} ${Headers})
 
 enable_testing()
 
